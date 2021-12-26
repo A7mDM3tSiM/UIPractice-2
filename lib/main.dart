@@ -17,7 +17,8 @@ class MyApp extends StatelessWidget {
           accentColor: Colors.amber[200],
           scaffoldBackgroundColor: Colors.white,
           // ignore: deprecated_member_use
-          primaryTextTheme: TextTheme(title: TextStyle(color: Colors.black))),
+          primaryTextTheme:
+              TextTheme(bodyText1: TextStyle(color: Colors.black))),
       home: SplashScreen(),
     );
   }
