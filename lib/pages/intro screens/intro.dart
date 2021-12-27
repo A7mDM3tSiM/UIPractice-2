@@ -9,16 +9,12 @@ class Introscreen extends StatefulWidget {
 
 class _IntroscreenState extends State<Introscreen> {
   int currentPage = 0;
-
-  final List<Map<String, String>> splashData = [
+  //PageView builder Data
+  List<Map<String, String>> splashData = [
     {'text': 'إطلب من أفضل المطاعم', 'image': 'assets/images/splash_1.PNG'},
     {'text': 'أفضل الوجبات و الحلويات', 'image': 'assets/images/splash_2.PNG'},
     {'text': 'خدمة توصيل سريعة', 'image': 'assets/images/splash_3.PNG'},
   ];
-
-  ///  WELL DONE OVERALL. Liked the animation and the code is well orginized
-  /// Just a few tips :)
-  /// check the comments below
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +25,6 @@ class _IntroscreenState extends State<Introscreen> {
       body: SafeArea(
         child: Stack(
           children: <Widget>[
-            SizedBox(height: 500), // why is this for ?!!
             PageView.builder(
               onPageChanged: (value) {
                 setState(() {
@@ -42,9 +37,10 @@ class _IntroscreenState extends State<Introscreen> {
                 image: splashData[index]['image'],
               ),
             ),
+            //The Dots
             Positioned(
               top: h * 0.53,
-              width: w, // w * 1 is just w -_-
+              width: w,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
@@ -53,7 +49,7 @@ class _IntroscreenState extends State<Introscreen> {
                 ),
               ),
             ),
-            // continue button better be fixed not moving with the page view
+            // Continue Button
             Positioned(
                 top: h * 0.8,
                 width: w,
@@ -84,6 +80,7 @@ class _IntroscreenState extends State<Introscreen> {
     );
   }
 
+//The Dots Function
   AnimatedContainer buildDot(int index) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 150),
@@ -100,6 +97,7 @@ class _IntroscreenState extends State<Introscreen> {
   }
 }
 
+//Spalash Function
 class SplashContent extends StatelessWidget {
   const SplashContent({
     Key? key,
