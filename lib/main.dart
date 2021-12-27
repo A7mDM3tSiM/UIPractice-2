@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:uipractice_2/pages/intro%20screens/intro.dart';
@@ -18,10 +18,9 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.amber,
           accentColor: Colors.amber[200],
           scaffoldBackgroundColor: Colors.white,
-          // ignore: deprecated_member_use
           primaryTextTheme:
               TextTheme(bodyText1: TextStyle(color: Colors.black))),
-      home: SplashScreen(),
+      home: Introscreen(),
     );
   }
 }
