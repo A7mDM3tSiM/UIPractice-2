@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: unused_import
 
+import 'package:flutter/material.dart';
+import 'package:uipractice_2/pages/intro%20screens/intro.dart';
 import 'pages/splash_screen.dart';
 
 void main() {
