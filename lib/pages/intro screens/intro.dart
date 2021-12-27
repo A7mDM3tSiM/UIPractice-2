@@ -16,6 +16,10 @@ class _IntroscreenState extends State<Introscreen> {
     {'text': 'خدمة توصيل سريعة', 'image': 'assets/images/splash_3.PNG'},
   ];
 
+  ///  WELL DONE OVERALL. Liked the animation and the code is well orginized
+  /// Just a few tips :)
+  /// check the comments below
+
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -25,7 +29,7 @@ class _IntroscreenState extends State<Introscreen> {
       body: SafeArea(
         child: Stack(
           children: <Widget>[
-            SizedBox(height: 500),
+            SizedBox(height: 500), // why is this for ?!!
             PageView.builder(
               onPageChanged: (value) {
                 setState(() {
@@ -40,7 +44,7 @@ class _IntroscreenState extends State<Introscreen> {
             ),
             Positioned(
               top: h * 0.53,
-              width: w * 1,
+              width: w, // w * 1 is just w -_-
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
@@ -49,6 +53,31 @@ class _IntroscreenState extends State<Introscreen> {
                 ),
               ),
             ),
+            // continue button better be fixed not moving with the page view
+            Positioned(
+                top: h * 0.8,
+                width: w,
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: w * .05),
+                  width: w * 0.9,
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'متابعة',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 25.0,
+                      ),
+                    ),
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.amber,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        )),
+                  ),
+                ))
           ],
         ),
       ),
@@ -58,7 +87,9 @@ class _IntroscreenState extends State<Introscreen> {
   AnimatedContainer buildDot(int index) {
     return AnimatedContainer(
       duration: Duration(milliseconds: 150),
-      margin: EdgeInsets.only(right: 10),
+      margin: EdgeInsets.symmetric(
+          horizontal:
+              5), // using symmetric is always better than left and right
       height: currentPage == index ? 6 : 5,
       width: currentPage == index ? 12 : 5,
       decoration: BoxDecoration(
@@ -95,14 +126,20 @@ class SplashContent extends StatelessWidget {
                 width: 300,
               ),
               SizedBox(
-                height: 50,
+                height:
+                    70, // just thought it's better like this , also it's safer to use MediaQuery alwaaays because responsiveness can be a pain in the ass
               ),
-              Text(
-                text!,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.black,
+              Padding(
+                padding: EdgeInsets.only(
+                    right:
+                        20.0), // arabic text is not aligned well in flutter it always flank to the right
+                child: Text(
+                  text!,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ],
@@ -111,26 +148,6 @@ class SplashContent extends StatelessWidget {
         SizedBox(
           height: 110,
         ),
-        Container(
-          width: MediaQuery.of(context).size.width * 0.9,
-          child: TextButton(
-            onPressed: () {},
-            child: Text(
-              'متابعة',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.w500,
-                fontSize: 25.0,
-              ),
-            ),
-            style: TextButton.styleFrom(
-                backgroundColor: Colors.amber,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
-                )),
-          ),
-        )
       ],
     );
   }
