@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:uipractice_2/pages/intro%20screens/intro.dart';
+import 'package:uipractice_2/pages/intro%20screens/sign_in_screen.dart';
 import 'pages/splash_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white,
           primaryTextTheme:
               TextTheme(bodyText1: TextStyle(color: Colors.black))),
-      home: Introscreen(),
+      home: signin(),
     );
   }
 }

@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, camel_case_types
 
 import 'package:flutter/material.dart';
 
@@ -53,26 +53,9 @@ class _IntroscreenState extends State<Introscreen> {
             Positioned(
                 top: h * 0.8,
                 width: w,
-                child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: w * .05),
-                  width: w * 0.9,
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'متابعة',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 25.0,
-                      ),
-                    ),
-                    style: TextButton.styleFrom(
-                        backgroundColor: Colors.amber,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        )),
-                  ),
+                child: Default_Button(
+                  txt: 'متابعة',
+                  btncolor: Colors.amber,
                 ))
           ],
         ),
@@ -92,6 +75,44 @@ class _IntroscreenState extends State<Introscreen> {
       decoration: BoxDecoration(
         color: currentPage == index ? Colors.amber : Colors.grey,
         borderRadius: BorderRadius.circular(2),
+      ),
+    );
+  }
+}
+
+// Continue Button funtion
+class Default_Button extends StatelessWidget {
+  const Default_Button({
+    Key? key,
+    required this.txt,
+    required this.btncolor,
+  }) : super(key: key);
+
+  final String txt;
+  final Color btncolor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(
+          horizontal: MediaQuery.of(context).size.width * .05),
+      width: MediaQuery.of(context).size.width * 0.9,
+      child: TextButton(
+        onPressed: () {},
+        child: Text(
+          txt,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w500,
+            fontSize: 25.0,
+          ),
+        ),
+        style: TextButton.styleFrom(
+            backgroundColor: btncolor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            )),
       ),
     );
   }
@@ -124,13 +145,10 @@ class SplashContent extends StatelessWidget {
                 width: 300,
               ),
               SizedBox(
-                height:
-                    70, // just thought it's better like this , also it's safer to use MediaQuery alwaaays because responsiveness can be a pain in the ass
+                height: 70,
               ),
               Padding(
-                padding: EdgeInsets.only(
-                    right:
-                        20.0), // arabic text is not aligned well in flutter it always flank to the right
+                padding: EdgeInsets.only(right: 20.0),
                 child: Text(
                   text!,
                   style: TextStyle(
