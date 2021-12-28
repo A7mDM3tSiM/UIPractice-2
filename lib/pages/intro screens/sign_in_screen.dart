@@ -153,7 +153,7 @@ class _TextFields_decoratiosState extends State<TextFields_decoratios> {
               keyboardType: widget.pass
                   ? TextInputType.visiblePassword
                   : TextInputType.number,
-              obscureText: passvisible,
+              obscureText: widget.pass == false ? passvisible : !passvisible,
               textAlign: TextAlign.right,
               cursorColor: Theme.of(context).primaryColor,
               decoration: InputDecoration(
