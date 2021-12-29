@@ -18,14 +18,19 @@ class TextFieldsdecoratios extends StatefulWidget {
 
 class _TextFieldsdecoratiosState extends State<TextFieldsdecoratios> {
   bool passvisible = false;
+
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
+
     return Form(
       child: Container(
         alignment: Alignment.centerRight,
-        height: MediaQuery.of(context).size.height * 0.07,
+        height: h * 0.07,
+        width: w,
         padding: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * 0.05,
+          horizontal: w * 0.05,
         ),
         decoration: BoxDecoration(
           color: secColor,
@@ -39,36 +44,39 @@ class _TextFieldsdecoratiosState extends State<TextFieldsdecoratios> {
               : TextInputType.number,
           cursorColor: mainColor,
           decoration: InputDecoration(
-              border: InputBorder.none,
-              hintText: widget.hintTxt,
-              hintStyle: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: fourthColor[400],
-              ),
-              prefixIcon: widget.pass
-                  ? IconButton(
-                      icon: Icon(
-                        passvisible
-                            ? Icons.visibility_off_outlined
-                            : Icons.visibility_outlined,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          passvisible = !passvisible;
-                        });
-                      },
-                      color: fourthColor[400],
-                    )
-                  : Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 8),
+            border: InputBorder.none,
+            hintText: widget.hintTxt,
+            hintStyle: TextStyle(
+              fontWeight: FontWeight.w400,
+              color: fourthColor[900],
+            ),
+            prefixIcon: widget.pass
+                ? IconButton(
+                    icon: Icon(
+                      passvisible
+                          ? Icons.visibility_off_outlined
+                          : Icons.visibility_outlined,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        passvisible = !passvisible;
+                      });
+                    },
+                    color: fourthColor[900],
+                  )
+                : Container(
+                    height: h * 0.001,
+                    width: w * 0.01,
+                    child: Center(
                       child: Text(
                         widget.prefixtxt,
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
-                            color: fourthColor[400]),
+                            color: fourthColor[900]),
                       ),
-                    )),
+                    ),
+                  ),
+          ),
         ),
       ),
     );
