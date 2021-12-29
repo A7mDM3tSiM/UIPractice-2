@@ -1,13 +1,14 @@
-// ignore_for_file: must_be_immutable, camel_case_types
-
 import 'package:flutter/material.dart';
+import 'package:uipractice_2/widgets/general/builddot_widget.dart';
+import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
+import '../../theme.dart';
 
-class Introscreen extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
   @override
-  State<Introscreen> createState() => _IntroscreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _IntroscreenState extends State<Introscreen> {
+class _SplashScreenState extends State<SplashScreen> {
   int currentPage = 0;
   //PageView builder Data
   List<Map<String, String>> splashData = [
@@ -45,7 +46,7 @@ class _IntroscreenState extends State<Introscreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
                   splashData.length,
-                  (index) => buildDot(index = index),
+                  (index) => BuildDot(index: index, currentPage: currentPage),
                 ),
               ),
             ),
@@ -53,70 +54,19 @@ class _IntroscreenState extends State<Introscreen> {
             Positioned(
                 top: h * 0.8,
                 width: w,
-                child: Default_Button(
+                child: DefaultButton(
+                  width: 0.04,
                   txt: 'متابعة',
-                  btncolor: Colors.amber,
+                  btncolor: mainColor,
                 ))
           ],
         ),
       ),
     );
   }
-
-//The Dots Function
-  AnimatedContainer buildDot(int index) {
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 150),
-      margin: EdgeInsets.symmetric(
-          horizontal:
-              5), // using symmetric is always better than left and right
-      height: currentPage == index ? 6 : 5,
-      width: currentPage == index ? 12 : 5,
-      decoration: BoxDecoration(
-        color: currentPage == index ? Colors.amber : Colors.grey,
-        borderRadius: BorderRadius.circular(2),
-      ),
-    );
-  }
 }
 
 // Continue Button funtion
-class Default_Button extends StatelessWidget {
-  const Default_Button({
-    Key? key,
-    required this.txt,
-    required this.btncolor,
-  }) : super(key: key);
-
-  final String txt;
-  final Color btncolor;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * .05),
-      width: MediaQuery.of(context).size.width * 0.9,
-      child: TextButton(
-        onPressed: () {},
-        child: Text(
-          txt,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w500,
-            fontSize: 25.0,
-          ),
-        ),
-        style: TextButton.styleFrom(
-            backgroundColor: btncolor,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            )),
-      ),
-    );
-  }
-}
 
 //Spalash Function
 class SplashContent extends StatelessWidget {
