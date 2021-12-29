@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uipractice_2/widgets/intro/splash/builddot_widget.dart';
+import 'package:uipractice_2/widgets/intro/builddot_widget.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 import '../../theme.dart';
 

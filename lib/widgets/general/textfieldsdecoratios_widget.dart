@@ -28,6 +28,7 @@ class _TextFieldsdecoratiosState extends State<TextFieldsdecoratios> {
       child: Container(
         alignment: Alignment.centerRight,
         height: h * 0.07,
+        width: w,
         padding: EdgeInsets.symmetric(
           horizontal: w * 0.05,
         ),
@@ -47,7 +48,7 @@ class _TextFieldsdecoratiosState extends State<TextFieldsdecoratios> {
             hintText: widget.hintTxt,
             hintStyle: TextStyle(
               fontWeight: FontWeight.w400,
-              color: fourthColor[400],
+              color: fourthColor[900],
             ),
             prefixIcon: widget.pass
                 ? IconButton(
@@ -61,7 +62,7 @@ class _TextFieldsdecoratiosState extends State<TextFieldsdecoratios> {
                         passvisible = !passvisible;
                       });
                     },
-                    color: fourthColor[400],
+                    color: fourthColor[900],
                   )
                 : Container(
                     height: h * 0.001,
@@ -71,7 +72,7 @@ class _TextFieldsdecoratiosState extends State<TextFieldsdecoratios> {
                         widget.prefixtxt,
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
-                            color: fourthColor[400]),
+                            color: fourthColor[900]),
                       ),
                     ),
                   ),

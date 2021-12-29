@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uipractice_2/widgets/general/imagefade_widget.dart';
+import 'package:uipractice_2/widgets/login/imagefade_widget.dart';
 import 'package:uipractice_2/widgets/general/textfieldsdecoratios_widget.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 import '../../theme.dart';
@@ -22,6 +22,7 @@ class _SigninState extends State<Signin> {
         child: Column(
           children: [
             Imagefade(
+              h: h * 0.38,
               img: 'assets/images/header_photo.jpg',
             ),
             SizedBox(

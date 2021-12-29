@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import, deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:uipractice_2/pages/sign_in/registor.dart';
 import 'package:uipractice_2/theme.dart';
 import 'package:uipractice_2/pages/splash%20screens/loading.dart';
 import 'package:uipractice_2/pages/splash%20screens/splash_screen.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: maintheme(),
-      home: Signin(),
+      home: RegistorScreen(),
     );
   }
 }
