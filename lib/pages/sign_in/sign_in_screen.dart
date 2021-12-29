@@ -4,14 +4,14 @@ import 'package:uipractice_2/widgets/general/textfieldsdecoratios_widget.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 import '../../theme.dart';
 
-class Signin extends StatefulWidget {
-  const Signin({Key? key}) : super(key: key);
+class SigninScreen extends StatefulWidget {
+  const SigninScreen({Key? key}) : super(key: key);
 
   @override
-  _SigninState createState() => _SigninState();
+  _SigninScreenState createState() => _SigninScreenState();
 }
 
-class _SigninState extends State<Signin> {
+class _SigninScreenState extends State<SigninScreen> {
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -36,6 +36,7 @@ class _SigninState extends State<Signin> {
                   TextFieldsdecoratios(
                     hintTxt: 'رقم الهاتف',
                     prefixtxt: '+249',
+                    width: 20,
                     pass: false,
                   ),
                   SizedBox(
@@ -44,6 +45,7 @@ class _SigninState extends State<Signin> {
                   TextFieldsdecoratios(
                     hintTxt: 'كلمة السر',
                     prefixtxt: 'icon',
+                    width: 20,
                     pass: true,
                   ),
                   SizedBox(
@@ -71,7 +73,7 @@ class _SigninState extends State<Signin> {
               children: [
                 DefaultButton(
                   //need to edit the default btn on intro.dart to do function....
-                  width: 0.05,
+                  width: 0.9,
                   txt: 'تسجيل دخول',
                   btncolor: mainColor,
                 ),

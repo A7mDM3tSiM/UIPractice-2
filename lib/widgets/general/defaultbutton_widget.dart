@@ -14,8 +14,7 @@ class DefaultButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(
-          horizontal: MediaQuery.of(context).size.width * width),
+      width: MediaQuery.of(context).size.width * width,
       child: TextButton(
         onPressed: () {},
         child: Center(

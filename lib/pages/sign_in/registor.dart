@@ -46,7 +46,7 @@ class _RegistorScreenState extends State<RegistorScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: h * .05,
+                  height: h * .04,
                 ),
                 Container(
                   margin: EdgeInsets.symmetric(horizontal: w * 0.05),
@@ -54,19 +54,26 @@ class _RegistorScreenState extends State<RegistorScreen> {
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       TextFieldsdecoratios(
-                          hintTxt: "الإسم", prefixtxt: "", pass: false),
+                        hintTxt: "الإسم",
+                        pass: false,
+                        width: 20,
+                      ),
                       SizedBox(
                         height: h * .05,
                       ),
                       TextFieldsdecoratios(
                           hintTxt: "رقم الهاتف",
                           prefixtxt: "+249",
+                          width: 20,
                           pass: false),
                       SizedBox(
                         height: h * .05,
                       ),
                       TextFieldsdecoratios(
-                          hintTxt: "كلمة المرور", prefixtxt: "", pass: true),
+                          hintTxt: "كلمة المرور",
+                          width: 20,
+                          prefixtxt: "",
+                          pass: true),
                       SizedBox(height: h * 0.02),
                       GestureDetector(
                         onTap: () {
@@ -81,22 +88,13 @@ class _RegistorScreenState extends State<RegistorScreen> {
                         ),
                       ),
                       SizedBox(height: h * 0.02),
-                      Container(
-                        height: h * 0.065,
-                        width: w,
-                        decoration: BoxDecoration(
-                          color: mainColor,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "إنشاء حساب ",
-                            style: TextStyle(fontSize: 24, color: Colors.black),
-                          ),
-                        ),
+                      DefaultButton(
+                        txt: "إنشاء حساب ",
+                        btncolor: mainColor,
+                        width: 0.9,
                       ),
                       SizedBox(
-                        height: h * 0.02,
+                        height: h * 0.015,
                       ),
                       GestureDetector(
                         onTap: () {
@@ -107,7 +105,7 @@ class _RegistorScreenState extends State<RegistorScreen> {
                           text: TextSpan(
                             children: <TextSpan>[
                               TextSpan(
-                                text: '  لديك حساب؟  ',
+                                text: 'لديك حساب بالفعل ',
                                 style: TextStyle(
                                     color: fourthColor[900],
                                     fontWeight: FontWeight.w500),
@@ -122,7 +120,7 @@ class _RegistorScreenState extends State<RegistorScreen> {
                         ),
                       ),
                       SizedBox(
-                        height: h * 0.05,
+                        height: h * 0.01,
                       )
                     ],
                   ),

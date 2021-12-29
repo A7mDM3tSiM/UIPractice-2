@@ -53,9 +53,9 @@ class _SplashScreenState extends State<SplashScreen> {
             // Continue Button
             Positioned(
                 top: h * 0.8,
-                width: w,
+                left: w * 0.05,
                 child: DefaultButton(
-                  width: 0.04,
+                  width: 0.9,
                   txt: 'متابعة',
                   btncolor: mainColor,
                 ))
@@ -65,8 +65,6 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
-// Continue Button funtion
 
 //Spalash Function
 class SplashContent extends StatelessWidget {
