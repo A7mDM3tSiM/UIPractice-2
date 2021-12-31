@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:uipractice_2/pages/sign_in/registor.dart';
 import 'package:uipractice_2/widgets/login/imagefade_widget.dart';
 import 'package:uipractice_2/widgets/general/textfieldsdecoratios_widget.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 import '../../theme.dart';
+import 'passwordchange.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({Key? key}) : super(key: key);
@@ -48,18 +50,17 @@ class _SigninScreenState extends State<SigninScreen> {
                     width: 20,
                     pass: true,
                   ),
-                  SizedBox(
-                    height: h * 0.03,
-                  ),
+                  SizedBox(height: h * 0.03),
                   GestureDetector(
                     onTap: () {
-                      print('hi'); //put something here
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Passwordchange()));
                     },
                     child: Text(
-                      'نسيت كلمة السر',
+                      'نسيت كلمة المرور ؟',
                       textAlign: TextAlign.right,
                       style: TextStyle(
-                          color: fourthColor[400], fontWeight: FontWeight.w600),
+                          color: fourthColor[900], fontWeight: FontWeight.w600),
                     ),
                   ),
                 ],
@@ -85,7 +86,8 @@ class _SigninScreenState extends State<SigninScreen> {
                       horizontal: MediaQuery.of(context).size.width * 0.06),
                   child: GestureDetector(
                     onTap: () {
-                      print('hi'); //put something here
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => RegistorScreen()));
                     },
                     child: RichText(
                       textAlign: TextAlign.right,

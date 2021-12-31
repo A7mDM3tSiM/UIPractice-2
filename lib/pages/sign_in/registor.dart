@@ -4,6 +4,8 @@ import 'package:uipractice_2/widgets/general/textfieldsdecoratios_widget.dart';
 import 'package:uipractice_2/widgets/login/imagefade_widget.dart';
 
 import '../../theme.dart';
+import 'passwordchange.dart';
+import 'sign_in_screen.dart';
 
 class RegistorScreen extends StatefulWidget {
   const RegistorScreen({Key? key}) : super(key: key);
@@ -74,20 +76,7 @@ class _RegistorScreenState extends State<RegistorScreen> {
                           width: 20,
                           prefixtxt: "",
                           pass: true),
-                      SizedBox(height: h * 0.02),
-                      GestureDetector(
-                        onTap: () {
-                          print('hi'); //put something here
-                        },
-                        child: Text(
-                          'نسيت كلمة المرور ؟',
-                          textAlign: TextAlign.right,
-                          style: TextStyle(
-                              color: fourthColor[900],
-                              fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                      SizedBox(height: h * 0.02),
+                      SizedBox(height: h * 0.05),
                       DefaultButton(
                         txt: "إنشاء حساب ",
                         btncolor: mainColor,
@@ -98,20 +87,21 @@ class _RegistorScreenState extends State<RegistorScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          print('hi'); //put something here
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => SigninScreen()));
                         },
                         child: RichText(
                           textAlign: TextAlign.right,
                           text: TextSpan(
                             children: <TextSpan>[
                               TextSpan(
-                                text: 'لديك حساب بالفعل ',
+                                text: 'لديك حساب بالفعل ؟ ',
                                 style: TextStyle(
                                     color: fourthColor[900],
                                     fontWeight: FontWeight.w500),
                               ),
                               TextSpan(
-                                  text: 'تسجيل دخول',
+                                  text: ' تسجيل دخول',
                                   style: TextStyle(
                                       color: thirdColor,
                                       fontWeight: FontWeight.w800))

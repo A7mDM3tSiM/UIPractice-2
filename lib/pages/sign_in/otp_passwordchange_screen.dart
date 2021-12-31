@@ -3,6 +3,8 @@ import 'package:uipractice_2/theme.dart';
 import 'package:uipractice_2/widgets/OTP/otpsquares.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 
+import 'newpassword.dart';
+
 class OtpPasswordChange extends StatefulWidget {
   const OtpPasswordChange({Key? key}) : super(key: key);
 
@@ -26,15 +28,7 @@ class _OtpPasswordChangeState extends State<OtpPasswordChange> {
           ),
         ),
         centerTitle: true,
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.arrow_forward_rounded,
-                color: Colors.black,
-                size: 30,
-              ))
-        ],
+        actions: [],
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
@@ -56,6 +50,10 @@ class _OtpPasswordChangeState extends State<OtpPasswordChange> {
             ),
             SizedBox(height: h * 0.075),
             DefaultButton(
+              func: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => NewPasswordScreen()));
+              },
               txt: 'متابعة',
               btncolor: mainColor,
               width: 0.75,

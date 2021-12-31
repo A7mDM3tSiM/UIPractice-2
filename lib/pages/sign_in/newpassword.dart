@@ -25,15 +25,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
           ),
         ),
         centerTitle: true,
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.arrow_forward_rounded,
-                color: Colors.black,
-                size: 30,
-              ))
-        ],
+        actions: [],
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
@@ -55,7 +47,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
               pass: false,
               width: 0.9,
             ),
-            SizedBox(height: h * 0.02),
+            SizedBox(height: h * 0.05),
             DefaultButton(
               txt: 'تغيير',
               btncolor: mainColor,

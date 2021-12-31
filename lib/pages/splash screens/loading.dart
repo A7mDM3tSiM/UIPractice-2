@@ -1,9 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:uipractice_2/pages/splash%20screens/splash_screen.dart';
 import 'package:uipractice_2/theme.dart';
 import 'package:uipractice_2/widgets/general/loading_widget.dart';
 
-class LoadingScreen extends StatelessWidget {
+class LoadingScreen extends StatefulWidget {
   const LoadingScreen({Key? key}) : super(key: key);
+
+  @override
+  _LoadingScreenState createState() => _LoadingScreenState();
+}
+
+class _LoadingScreenState extends State<LoadingScreen> {
+  @override
+  void initState() {
+    super.initState();
+    navigateAfterCounter();
+  }
+
+  navigateAfterCounter() async {
+    await Future.delayed(Duration(seconds: 5));
+    Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (context) => SplashScreen()));
+  }
 
   @override
   Widget build(BuildContext context) {
