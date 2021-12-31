@@ -1,18 +1,6 @@
-// ignore_for_file: unused_import, deprecated_member_use
-
-import 'dart:collection';
-
 import 'package:flutter/material.dart';
-import 'package:uipractice_2/pages/sign_in/newpassword.dart';
-import 'package:uipractice_2/pages/sign_in/otp_passwordchange_screen.dart';
-import 'package:uipractice_2/pages/sign_in/otp_screen.dart';
-import 'package:uipractice_2/pages/sign_in/passwordchange.dart';
-import 'package:uipractice_2/pages/sign_in/registor.dart';
-import 'package:uipractice_2/theme.dart';
 import 'package:uipractice_2/pages/splash%20screens/loading.dart';
-import 'package:uipractice_2/pages/splash%20screens/splash_screen.dart';
-import 'package:uipractice_2/pages/sign_in/sign_in_screen.dart';
-import 'package:uipractice_2/widgets/general/loading_widget.dart';
+import 'package:uipractice_2/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: maintheme(),
-      home: RegistorScreen(),
+      home: LoadingScreen(),
     );
   }
 }

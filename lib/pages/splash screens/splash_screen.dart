@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uipractice_2/pages/sign_in/sign_in_screen.dart';
 import 'package:uipractice_2/widgets/intro/builddot_widget.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 import '../../theme.dart';
@@ -55,6 +56,10 @@ class _SplashScreenState extends State<SplashScreen> {
                 top: h * 0.8,
                 left: w * 0.05,
                 child: DefaultButton(
+                  func: () {
+                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        builder: (context) => SigninScreen()));
+                  },
                   width: 0.9,
                   txt: 'متابعة',
                   btncolor: mainColor,
