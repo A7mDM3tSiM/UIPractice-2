@@ -4,7 +4,6 @@ import 'package:uipractice_2/widgets/general/textfieldsdecoratios_widget.dart';
 import 'package:uipractice_2/widgets/login/imagefade_widget.dart';
 
 import '../../theme.dart';
-import 'passwordchange.dart';
 import 'sign_in_screen.dart';
 
 class RegistorScreen extends StatefulWidget {

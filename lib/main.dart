@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:uipractice_2/pages/sign_in/homescreen.dart';
+import 'package:uipractice_2/pages/sign_in/newpassword.dart';
+import 'package:uipractice_2/pages/sign_in/sign_in_screen.dart';
 import 'package:uipractice_2/pages/splash%20screens/loading.dart';
 import 'package:uipractice_2/theme.dart';
 
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: maintheme(),
-      home: LoadingScreen(),
+      home: HomeScreen(),
     );
   }
 }
