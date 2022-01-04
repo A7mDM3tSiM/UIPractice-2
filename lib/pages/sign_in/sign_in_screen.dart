@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:uipractice_2/pages/sign_in/registor.dart';
+import 'package:uipractice_2/pages/sign_in/registor_screen.dart';
 import 'package:uipractice_2/widgets/login/imagefade_widget.dart';
 import 'package:uipractice_2/widgets/general/textfieldsdecoratios_widget.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 import '../../theme.dart';
-import 'passwordchange.dart';
+import 'passwordchange_screen.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({Key? key}) : super(key: key);

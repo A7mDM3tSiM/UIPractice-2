@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:uipractice_2/widgets/home/list_generate.dart';
 import 'package:uipractice_2/widgets/intro/builddot_widget.dart';
 
 import '../../theme.dart';
@@ -207,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         SizedBox(
-                          height: h * 0.040,
+                          height: h * 0.020,
                         ),
                         Container(
                           margin: EdgeInsets.only(right: w * 0.005),
@@ -221,7 +222,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Container(
-                          height: h * 0.25,
+                          height: h * 0.3,
+                          width: w,
                           child: PageView.builder(
                             scrollDirection: Axis.horizontal,
                             onPageChanged: (value) {
@@ -230,8 +232,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               });
                             },
                             itemCount: splashData.length,
-                            itemBuilder: (context, index) => SplashContent(
+                            itemBuilder: (context, index) => ListGenerate(
                               image: splashData[index]['image'],
+                              datasize: splashData.length, //put data here..
+                              name: 'Saudi', //here..
+                              rating: '4.5',
+                              deserts: '',
+                              delivery: '',
+                              prics: 0, //and here..
                             ),
                           ),
                         ),
@@ -258,58 +266,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class SplashContent extends StatelessWidget {
-  const SplashContent({
-    Key? key,
-    required this.image,
-  }) : super(key: key);
-
-  final String? image;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: List.generate(
-              5,
-              (index) => Column(children: [
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 5),
-                  height: MediaQuery.of(context).size.height * 0.22,
-                  width: MediaQuery.of(context).size.width * 0.7,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        bottomRight: Radius.circular(15),
-                        topRight: Radius.circular(15),
-                        bottomLeft: Radius.circular(15),
-                      ),
-                      color: Colors.black
-                      //   image: DecorationImage(image: AssetImage(image!), fit: BoxFit.fill),
-                      ),
-                ),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25),
-                      child: Text('data'),
-                    ),
-                    Text('data')
-                  ],
-                )
-              ]),
-            ),
-          ),
-        ),
-      ],
     );
   }
 }

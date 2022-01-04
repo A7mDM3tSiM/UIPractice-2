@@ -3,7 +3,7 @@ import 'package:uipractice_2/theme.dart';
 import 'package:uipractice_2/widgets/OTP/otpsquares.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 
-import 'newpassword.dart';
+import 'newpassword_screen.dart';
 
 class OtpPasswordChange extends StatefulWidget {
   const OtpPasswordChange({Key? key}) : super(key: key);

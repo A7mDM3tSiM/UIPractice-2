@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:uipractice_2/pages/sign_in/homescreen.dart';
-import 'package:uipractice_2/pages/sign_in/newpassword.dart';
+import 'package:uipractice_2/pages/sign_in/home_screen.dart';
+import 'package:uipractice_2/pages/sign_in/newpassword_screen.dart';
 import 'package:uipractice_2/pages/sign_in/sign_in_screen.dart';
 import 'package:uipractice_2/pages/splash%20screens/loading.dart';
 import 'package:uipractice_2/theme.dart';
