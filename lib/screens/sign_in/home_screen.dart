@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:uipractice_2/widgets/home/list_generate.dart';
-import 'package:uipractice_2/widgets/intro/builddot_widget.dart';
+import 'package:uipractice_2/screens/splash%20screens/splash_screen/components/builddot_widget.dart';
 
 import '../../theme.dart';
 
@@ -222,27 +222,25 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Container(
-                          height: h * 0.3,
-                          width: w,
-                          child: PageView.builder(
-                            scrollDirection: Axis.horizontal,
-                            onPageChanged: (value) {
-                              setState(() {
-                                currentPage = value;
-                              });
-                            },
-                            itemCount: splashData.length,
-                            itemBuilder: (context, index) => ListGenerate(
-                              image: splashData[index]['image'],
-                              datasize: splashData.length, //put data here..
-                              name: 'Saudi', //here..
-                              rating: '4.5',
-                              deserts: '',
-                              delivery: '',
-                              prics: 0, //and here..
-                            ),
-                          ),
-                        ),
+                            height: h * 0.3,
+                            width: w,
+                            child: SingleChildScrollView(
+                              scrollDirection: Axis.horizontal,
+                              child: Row(
+                                children: [
+                                  ListGenerate(
+                                    image: splashData[0]['image'],
+                                    datasize:
+                                        splashData.length, //put data here..
+                                    name: 'Saudi', //here..
+                                    rating: '4.5',
+                                    deserts: '',
+                                    delivery: '',
+                                    prics: 0, //and here..
+                                  ),
+                                ],
+                              ),
+                            )),
                         SizedBox(
                           height: h * 0.01,
                         ),
