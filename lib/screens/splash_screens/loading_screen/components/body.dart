@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:uipractice_2/screens/splash%20screens/splash_screen/splash_screen.dart';
+
 import 'package:uipractice_2/sizeconfig.dart';
 import 'package:uipractice_2/theme.dart';
-import 'package:uipractice_2/screens/splash screens/loading_screen/components/loading_widget.dart';
+
+import 'package:uipractice_2/screens/splash_screens/splash_screen/splash_screen.dart';
+
+import 'package:uipractice_2/screens/splash_screens/loading_screen/components/loading_widget.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);

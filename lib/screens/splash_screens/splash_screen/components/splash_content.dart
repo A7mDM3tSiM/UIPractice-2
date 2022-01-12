@@ -29,18 +29,22 @@ class SplashContent extends StatelessWidget {
               SizedBox(
                 height: getProportionateScreenHeight(70),
               ),
-              Padding(
-                padding: text == 'خدمة توصيل سريعة'
-                    ? EdgeInsets.only(left: getProportionateScreenWidth(25))
-                    : EdgeInsets.only(
-                        right: getProportionateScreenWidth(20),
-                      ),
-                child: Text(
-                  text!,
-                  style: TextStyle(
-                    fontSize: getProportionateScreenHeight(25),
-                    fontWeight: FontWeight.w500,
-                    color: Colors.black,
+              Container(
+                alignment: Alignment.center,
+                width: double.infinity,
+                child: Padding(
+                  padding: text == 'خدمة توصيل سريعة'
+                      ? EdgeInsets.only(left: getProportionateScreenWidth(18))
+                      : EdgeInsets.only(
+                          right: getProportionateScreenWidth(18),
+                        ),
+                  child: Text(
+                    text!,
+                    style: TextStyle(
+                      fontSize: getProportionateScreenHeight(25),
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ),

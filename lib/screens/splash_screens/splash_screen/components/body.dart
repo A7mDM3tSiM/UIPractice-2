@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:uipractice_2/screens/sign_in/sign_in_screen.dart';
+import 'package:uipractice_2/screens/sign_in_&_up_screens/sign_in/sign_in_screen.dart';
+
 import 'package:uipractice_2/sizeconfig.dart';
+import 'package:uipractice_2/theme.dart';
+
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 
-import '../../../../theme.dart';
-import 'builddot_widget.dart';
-import 'splash_content.dart';
+import 'package:uipractice_2/screens/splash_screens/splash_screen/components/builddot_widget.dart';
+import 'package:uipractice_2/screens/splash_screens/splash_screen/components/splash_content.dart';
 
 class Body extends StatefulWidget {
   @override
@@ -25,12 +27,14 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     double h = MediaQuery.of(context).size.height;
-    double w = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
+            SizedBox(
+              height: getProportionateScreenHeight(20),
+            ),
             Stack(
               children: <Widget>[
                 Container(
@@ -64,6 +68,9 @@ class _BodyState extends State<Body> {
                 ),
               ],
             ),
+            SizedBox(
+              height: getProportionateScreenHeight(125),
+            ),
             DefaultButton(
               func: () {
                 Navigator.of(context).pushReplacement(
@@ -82,5 +89,3 @@ class _BodyState extends State<Body> {
     );
   }
 }
-
-//Spalash Function

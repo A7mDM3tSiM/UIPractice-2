@@ -27,7 +27,6 @@ class _PasswordchangeState extends State<Passwordchange> {
           ),
         ),
         centerTitle: true,
-        actions: [],
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),

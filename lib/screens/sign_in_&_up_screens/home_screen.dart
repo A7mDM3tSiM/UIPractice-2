@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:uipractice_2/widgets/home/list_generate.dart';
-import 'package:uipractice_2/screens/splash%20screens/splash_screen/components/builddot_widget.dart';
 
 import '../../theme.dart';
+
+import 'package:uipractice_2/screens/splash_screens/splash_screen/components/builddot_widget.dart';
+
+import 'package:uipractice_2/widgets/home/list_generate.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

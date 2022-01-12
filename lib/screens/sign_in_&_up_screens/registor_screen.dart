@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:uipractice_2/screens/sign_in_&_up_screens/sign_in/sign_in_screen.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
 import 'package:uipractice_2/widgets/general/textfieldsdecoratios_widget.dart';
 import 'package:uipractice_2/widgets/login/imagefade_widget.dart';
 
 import '../../theme.dart';
-import 'sign_in_screen.dart';
 
 class RegistorScreen extends StatefulWidget {
   const RegistorScreen({Key? key}) : super(key: key);

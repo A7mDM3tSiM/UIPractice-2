@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:uipractice_2/pages/sign_in/registor_screen.dart';
+import 'package:uipractice_2/screens/sign_in_&_up_screens/passwordchange_screen.dart';
+import 'package:uipractice_2/screens/sign_in_&_up_screens/registor_screen.dart';
 import 'package:uipractice_2/widgets/login/imagefade_widget.dart';
 import 'package:uipractice_2/widgets/general/textfieldsdecoratios_widget.dart';
 import 'package:uipractice_2/widgets/general/defaultbutton_widget.dart';
-import '../../theme.dart';
-import 'passwordchange_screen.dart';
+import '../../../../theme.dart';
 
-class SigninScreen extends StatefulWidget {
-  const SigninScreen({Key? key}) : super(key: key);
+class Body extends StatefulWidget {
+  const Body({Key? key}) : super(key: key);
 
   @override
-  _SigninScreenState createState() => _SigninScreenState();
+  _BodyState createState() => _BodyState();
 }
 
-class _SigninScreenState extends State<SigninScreen> {
+class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
